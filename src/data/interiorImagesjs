@@ -1,0 +1,22 @@
+export const interiorImages = {
+    blackDinamica: [
+        "interieurs/vues/cuir-noir_dinamica-1.jpg",
+        "interieurs/vues/cuir-noir_dinamica-2.jpg",
+        "interieurs/vues/cuir-noir_dinamica-3.jpg"
+    ],
+    blackPerforated: [
+        "interieurs/vues/cuir-noir_perfore-1.jpg",
+        "interieurs/vues/cuir-noir_perfore-2.jpg",
+        "interieurs/vues/cuir-noir_perfore-3.jpg",
+    ],
+    comfortBlack: [
+        "interieurs/vues/cuir-noir-1.jpg",
+        "interieurs/vues/cuir-noir-2.jpg",
+        "interieurs/vues/cuir-noir-3.jpg",
+    ],
+    comfortBrown: [
+        "interieurs/vues/cuir-brun-1.jpg",
+        "interieurs/vues/cuir-brun-2.jpg",
+        "interieurs/vues/cuir-brun-3.jpg",
+    ]
+}

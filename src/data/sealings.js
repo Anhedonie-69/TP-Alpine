@@ -1,33 +1,33 @@
 export const sealings = [
     {
-        id: "seating-bucket-black-dinamica",
+        id: "blackDinamica",
         name: "Sièges baquets en cuir noir Dinamica",
         price: 0,
         image: "interieurs/selection/cuir-noir_dinamica.jpg",
-        availableFor: ["a110-pure"]
+        availableFor: ["pure"]
     },
 
     {
-        id: "seating-comfort-black-perforated",
+        id: "blackPerforated",
         name: "Sièges Confort en cuir noir perforé",
         price: 800,
         image: "interieurs/selection/cuir-noir_perfore.jpg",
-        availableFor: ["a110-pure"]
+        availableFor: ["pure"]
     },
 
     {
-        id: "seating-comfort-black",
+        id: "comfortBlack",
         name: "Sièges Confort en cuir noir",
         price: 0,
         image: "interieurs/selection/cuir-noir.jpg",
-        availableFor: ["a110-legende"]
+        availableFor: ["legende"]
     },
 
     {
-        id: "seating-comfort-brown",
+        id: "comfortBrown",
         name: "Sièges Confort en cuir brun",
         price: 800,
         image: "interieurs/selection/cuir-brun.jpg",
-        availableFor: ["a110-legende"]
+        availableFor: ["legende"]
     }
 ]

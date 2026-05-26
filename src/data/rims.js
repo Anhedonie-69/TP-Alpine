@@ -1,25 +1,25 @@
 export const rims = [
     {
-        id: "rims-standard",
-        name: "Jantes Standard",
+        id: "standard",
+        name: "Standard",
         price: 0,
         image: "jantes/selection/jante-standard.jpg",
-        availableFor: ["a110-pure"]
+        availableFor: ["pure"]
     },
 
     {
-        id: "rims-serac",
-        name: "Jantes Serac",
+        id: "serac",
+        name: "Serac",
         price: 1000,
         image: "jantes/selection/jante-serac.jpg",
-        availableFor: ["a110-pure"]
+        availableFor: ["pure"]
     },
 
     {
-        id: "rims-legend",
-        name: "Jantes Legende",
+        id: "legende",
+        name: "Legende",
         price: 0,
         image: "jantes/selection/jante-legende.jpg",
-        availableFor: ["a110-legende"]
+        availableFor: ["legende"]
     }
 ]
