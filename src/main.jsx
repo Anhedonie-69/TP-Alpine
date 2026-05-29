@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Provider store={store}>
-      <BrowserRouter basename="/TP-Alpine">
+      <BrowserRouter>
         <App />
       </BrowserRouter>
     </Provider>
