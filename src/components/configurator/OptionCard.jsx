@@ -1,6 +1,6 @@
 import React from "react";
 
-const BASE_IMG_CONFIG = "../../assets/images/configurateur/"
+const BASE_IMG_CONFIG = "../../../public/assets/images/configurateur/"
 
 function OptionCard({ option, selected, onClick }) {
 

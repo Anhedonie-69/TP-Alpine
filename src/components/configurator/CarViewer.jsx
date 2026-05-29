@@ -1,7 +1,7 @@
 import useCarViewer from "../../hooks/useCarViewer";
 
 const BASE =
-    "../../assets/images/configurateur/";
+    "../../../public/assets/images/configurateur/";
 
 function CarViewer() {
 

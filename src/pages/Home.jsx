@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { vehicles } from "../data/vehicles";
 
-const BASE_IMG_CONFIG = "../assets/images/configurateur/"
+const BASE_IMG_CONFIG = "../../public/assets/images/configurateur/"
 
 function Home() {
 
