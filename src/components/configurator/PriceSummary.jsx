@@ -1,114 +1,25 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-import { vehicles } from "../../data/vehicles";
-import { colors } from "../../data/colors";
-import { rims } from "../../data/rims";
-import { sealings } from "../../data/sealings";
-import { equipments } from "../../data/equipments";
-import { accessories } from "../../data/accessories";
+import useConfiguratorSummary from "../../hooks/useConfiguratorSummary";
 
 function PriceSummary(){
 
-    const sumCategory = (items, data) => {
-       if (!items || !data) return 0;
+    const {
+        selectedVehicle,
+        selectedColor,
+        selectedRim,
+        selectedSealing,
+        selectedEquipments,
+        selectedAccessories,
 
-       let total = 0;
-
-       for (const category in items) {
-           const value = items[category];
-
-           const categoryData = data[category];
-
-           if (!categoryData) continue;
-
-           if (Array.isArray(value)) {
-               value.forEach(id => {
-                   const item = categoryData.items.find(i => i.id === id);
-                   if (item) total += item.price;
-               });
-           } else {
-               const item = categoryData.items.find(i => i.id === value);
-               if (item) total += item.price;
-           }
-       }
-
-       return total;
-    };
-
-    const getSelectedItems = (stateItems, data) => {
-
-        const result = [];
-
-        for (const category in stateItems) {
-
-            const value = stateItems[category];
-
-            const categoryData = data[category];
-
-            if (!categoryData) continue;
-
-            // MULTIPLE
-            if (Array.isArray(value)) {
-
-                value.forEach(id => {
-
-                    const item = categoryData.items.find(i => i.id === id);
-
-                    if (item) result.push(item);
-                });
-            }
-
-            // SINGLE
-            else if (value) {
-
-                const item = categoryData.items.find(i => i.id === value);
-
-                if (item) result.push(item);
-            }
-        }
-
-        return result;
-    };
-
-    const vehicleState = useSelector(
-        state => state.configurator.vehicle
-    );
-
-    const selectedVehicle = vehicles.find(
-        v => v.id === vehicleState.model
-    );
-
-    const selectedColor = colors.find(
-        c => c.id === vehicleState.color
-    );
-
-    const selectedRim = rims.find(
-        r => r.id === vehicleState.rim
-    );
-
-    const selectedSealing = sealings.find(
-        s => s.id === vehicleState.interior
-    );
-
-    const equipmentsState = useSelector(state => state.configurator.equipments);
-    const accessoriesState = useSelector(state => state.configurator.accessories);
-
-    const selectedEquipments =
-        getSelectedItems(equipmentsState, equipments);
-    
-    const selectedAccessories =
-        getSelectedItems(accessoriesState, accessories);
-
-    const vehiclePrice = vehicleState.price || 0;
-    const colorPrice = selectedColor.price || 0;
-    const rimPrice = selectedRim.price || 0;
-    const sealingPrice = selectedSealing.price || 0;
-
-    const equipmentPrice = sumCategory(equipmentsState, equipments);
-    const accessoryPrice = sumCategory(accessoriesState, accessories);
-
-    const totalPrice = vehiclePrice + colorPrice + rimPrice + sealingPrice + equipmentPrice + accessoryPrice;
+        vehiclePrice,
+        colorPrice,
+        rimPrice,
+        sealingPrice,
+        
+        totalPrice
+    } = useConfiguratorSummary();
 
     return (
 

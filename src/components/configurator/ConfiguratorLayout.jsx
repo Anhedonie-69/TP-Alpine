@@ -1,6 +1,5 @@
 import React from "react";
 
-import Breadcrumb from './Breadcrumb';
 import CarViewer from "./CarViewer";
 import PriceSummary from './PriceSummary';
 import StepNavigation from "./StepNavigation";
@@ -10,10 +9,6 @@ function ConfiguratorLayout({children}){
     return (
 
         <div className="min-h-screen bg-base-200 p-4">
-
-            {/* Breadcrumb */}
-
-            {/*<Breadcrumb />*/}
 
             {/* Main layout */}
 
